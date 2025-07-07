@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="on click.css">
+</head>
+<body>
+    <div id="two">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam eaque, nihil provident officia mollitia architecto quisquam non cupiditate autem, dolorum vitae dolor odit quia aut pariatur minus necessitatibus. Inventore, maxime?</p>
+    </div>
+    <button onclick="change()" ondblclick="changee()">Hide/Show</button>
+    <script>
+        function change()
+        {
+            let tar= document.getElementById("two");
+            tar.innerHTML="";
+        }
+        function changee()
+        {
+            let tar =document.getElementById("two");
+           tar.innerHTML="lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam eaque, nihil provident officia mollitia architecto quisquam non cupiditate autem, dolorum vitae dolor odit quia aut pariatur minus necessitatibus. Inventore, maxime?" 
+            
+        }
+    </script>
+</body>
+</html>

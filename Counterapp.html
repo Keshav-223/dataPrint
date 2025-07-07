@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        body
+        {
+            background-color: #0F9E99;
+        }
+        h1
+        {
+            margin: 20px ;
+            text-align: center;
+            font-size: 50px;
+            font-family: cursive;
+            color: #EFE9E0;
+        }
+        h1:hover
+        {
+            transform: scale(1.1);
+            transition: linear 0.4s;
+            cursor: default;
+        }
+        button
+        {
+            background-color: #0F9E99;
+            color: #EFE9E0;
+            width: 150px;
+            height: 40px;
+            border: none;
+            border-radius: 20px;
+            font-size: 22px;
+            font-family: cursive;
+            margin: 4px;
+            cursor: pointer;
+        }
+        button:hover
+        {
+            border: 3px solid #EFE9E0;
+            background-color: unset;
+            color: #EFE9E0;
+            transform: scale(1.1);
+            transition: linear 0.3s;
+        }
+        #counter
+        {
+            
+            padding: 40px;
+            width: 400px;
+            text-align: center;
+            /* background-color: #191265; */
+            border: 7px solid #EFE9E0;
+            border-radius: 40px;
+            margin: auto;
+            
+        }
+    </style>
+<body>
+    <div id="counter">
+        <h1>0</h1>
+
+    <div id="button">
+        <button onclick="increase()">Increment</button>
+        <button onclick="decrease()">Decrement</button>
+        <button onclick="Reset()">Reset</button>
+    </div>
+    </div>
+    
+
+    <script>
+        let count=0;
+        function increase()
+        {
+            let tar=document.getElementsByTagName("h1")[0];
+            count++;
+            tar.innerHTML=count;
+        }
+        function decrease()
+        {
+            let tar=document.getElementsByTagName("h1")[0];
+            count--;
+            tar.innerHTML=count; 
+
+            if(count<0)
+        {
+            count=0;
+            tar.innerHTML=count
+            alert("Negative Digit not Allowed");
+        }
+        }
+        function Reset()
+        {
+            let tar=document.getElementsByTagName("h1")[0];
+            count=0;
+            tar.innerHTML=count;
+        }
+    </script>
+</body>
+</html>
